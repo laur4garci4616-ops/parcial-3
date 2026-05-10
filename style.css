@@ -1,0 +1,210 @@
+/* --- Variables de Color (Paleta Nocturna) --- */
+:root {
+    --negro-profundo: #050505;
+    --gris-ceniza: #1a1a1a;
+    --morado-oscuro: #2e003e;
+    --morado-neon: #8a2be2;
+    --texto-plata: #d1d1d1;
+    --acento-sangre: #4a0404;
+    --fuente-titulos: 'Cinzel', serif;
+    --fuente-cuerpo: 'EB Garamond', serif;
+}
+
+/* --- Configuración General --- */
+body {
+    background-color: var(--negro-profundo);
+    color: var(--texto-plata);
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+/* --- Navegación --- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    border-bottom: 1px solid var(--morado-neon);
+    padding: 1rem 0;
+}
+
+.navbar-brand h1 {
+    font-family: 'UnifrakturMaguntia', cursive; /* Estilo Fraktur/Gótico medieval */
+    color: var(--morado-neon) !important;
+    font-size: 2.8rem;
+    margin: 0;
+    transition: 0.5s;
+}
+
+.navbar-brand h1:hover {
+    text-shadow: 0 0 15px var(--morado-neon);
+}
+
+.nav-link h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover h3 {
+    color: var(--morado-neon) !important;
+}
+
+/* --- Sección Hero (Título) --- */
+#titulo {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1600') no-repeat center center/cover;
+    padding: 10% 15%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.title-image {
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.3);
+    transform: rotate(-2deg);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.title-image:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 0 0 50px var(--morado-neon);
+}
+
+/* --- Botones --- */
+.btn-dark {
+    background-color: var(--morado-oscuro);
+    border: 1px solid var(--morado-neon);
+    font-family: var(--fuente-titulos);
+    padding: 12px 30px;
+    transition: 0.4s;
+}
+
+.btn-dark:hover {
+    background-color: var(--morado-neon);
+    box-shadow: 0 0 20px var(--morado-neon);
+    color: white;
+}
+
+.btn-outline-dark {
+    border: 1px solid var(--texto-plata);
+    color: var(--texto-plata);
+}
+
+.btn-outline-dark:hover {
+    background-color: transparent;
+    border-color: var(--morado-neon);
+    color: var(--morado-neon);
+}
+
+/* --- Características (Iconos) --- */
+#caracteristicas {
+    background-color: var(--gris-ceniza);
+    padding: 100px 10%;
+    position: relative;
+}
+
+.icon {
+    color: var(--morado-neon);
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.caja-caracteristica:hover .icon {
+    transform: scale(1.1);
+    color: white;
+    filter: drop-shadow(0 0 10px var(--morado-neon));
+}
+
+/* --- Testimonios (Carrusel) --- */
+#testimonios {
+    background-color: var(--morado-oscuro);
+    padding: 80px 10%;
+}
+
+.img-testimonio {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--morado-neon);
+    margin-bottom: 20px;
+}
+
+/* --- Precios (Membresías) --- */
+#precios {
+    padding: 100px 5%;
+}
+
+.precios-col {
+    padding: 2%;
+}
+
+.card {
+    background-color: #111;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 0; /* Bordes rectos para un look más serio */
+    transition: 0.4s;
+}
+
+.card:hover {
+    border-color: var(--morado-neon);
+    transform: translateY(-15px);
+}
+
+.card-header {
+    background-color: var(--gris-ceniza);
+    border-bottom: 1px solid var(--morado-neon);
+    padding: 20px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    color: var(--texto-plata);
+    border-color: #222;
+    padding: 15px;
+}
+
+/* --- CTA y Footer --- */
+#cta {
+    background: linear-gradient(45deg, #000, var(--acento-sangre), #000);
+    padding: 100px 15%;
+    text-align: center;
+}
+
+#footer {
+    background-color: black;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.social-icon {
+    margin: 0 15px;
+    color: var(--texto-plata);
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: var(--morado-neon);
+    transform: translateY(-5px);
+}
+
+/* --- Animaciones de Interacción --- */
+@keyframes glow {
+    from { text-shadow: 0 0 5px var(--morado-neon); }
+    to { text-shadow: 0 0 20px var(--morado-neon), 0 0 30px white; }
+}
+
+.encabezado-cta {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
